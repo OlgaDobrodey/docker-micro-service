@@ -1,2 +1,6 @@
 rootProject.name = 'micro-service'
 
+includeBuild('eureka-server')
+includeBuild('eureka-client')
+includeBuild('api-getway')
+includeBuild('eureka-client-2')
