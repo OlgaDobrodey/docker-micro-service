@@ -1,0 +1,45 @@
+version: '3.5'
+
+services:
+  eureka-service:
+
+    container_name: eureka-server
+    build:
+      context: ./eureka-server
+      dockerfile: Dockerfile
+    ports:
+      - "8762:8762"
+
+  eureka-client:
+
+    container_name: eureka-client
+    build:
+      context: ./eureka-client
+      dockerfile: Dockerfile
+    depends_on:
+      - eureka-service
+    ports:
+      - "8081:8081"
+
+  eureka-client-2:
+
+    container_name: eureka-client-2
+    build:
+      context: ./eureka-client-2
+      dockerfile: Dockerfile
+    depends_on:
+      - eureka-client
+    ports:
+      - "8082:8082"
+
+  api-getway:
+    container_name: api-getway
+    build:
+      context: ./api-getway
+      dockerfile: Dockerfile
+    depends_on:
+      - eureka-client-2
+    ports:
+      - "8765:8765"
+
+

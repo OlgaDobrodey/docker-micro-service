@@ -1,0 +1,57 @@
+{
+	"info": {
+		"_postman_id": "18b72f93-2416-4386-a1b5-3a8ea884f70f",
+		"name": "docker-simple-micro-sevrice-eureka",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Hello Word",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8765/new/name",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8765",
+					"path": [
+						"new",
+						"name"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Client 2 return id client",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8765/main/test",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8765",
+					"path": [
+						"main",
+						"test"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Eureka",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		}
+	]
+}
